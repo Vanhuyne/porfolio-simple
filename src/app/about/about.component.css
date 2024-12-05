@@ -1,0 +1,15 @@
+/* Custom transitions for social icons */
+a {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Smooth image loading */
+img {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Custom font rendering */
+h1, p {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

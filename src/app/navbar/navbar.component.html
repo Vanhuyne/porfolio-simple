@@ -1,0 +1,50 @@
+<nav class="px-10 flex justify-between items-center ">
+    <!-- Profile Image -->
+    <div class="flex items-center">
+    </div>
+  
+    <!-- Center Navigation Links -->
+    <div class="flex space-x-6 bg-gray-800 px-6 py-2 rounded-full">
+      <a
+        routerLink="/about"
+        routerLinkActive="text-teal-500"
+        class="text-white hover:text-teal-500 transition duration-300"
+      >
+        About
+      </a>
+      <a
+        routerLink="/articles"
+        routerLinkActive="text-teal-500"
+        class="text-white hover:text-teal-500 transition duration-300"
+      >
+        Articles
+      </a>
+      <a
+        routerLink="/projects"
+        routerLinkActive="text-teal-500"
+        class="text-white hover:text-teal-500 transition duration-300"
+      >
+        Projects
+      </a>
+      <a
+        routerLink="/speaking"
+        routerLinkActive="text-teal-500"
+        class="text-white hover:text-teal-500 transition duration-300"
+      >
+        Contact
+      </a>
+  
+    </div>
+  
+    <!-- Theme Toggle Icon -->
+    <div class="flex items-center">
+      <button
+        class="p-2 px-4 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300"
+        (click)="toggleTheme()"
+      >
+      <i class="fas" [ngClass]="isDarkMode ? 'fa-sun text-teal-500 ' : 'fa-moon text-white'"></i>
+
+      </button>
+    </div>
+  </nav>
+  
