@@ -9,8 +9,6 @@ import { ContactComponent } from './contact/contact.component';
 const routes: Routes = [
   // when we go to localhost:4200/ then show HomeComponent
   {path : '', component: HomeComponent},
-  {path : 'about', component: AboutComponent},
-  {path : 'projects', component: ProjectsComponent},
   {path : 'skills', component: SkillsComponent},
   {path : 'contact', component: ContactComponent},
 ];

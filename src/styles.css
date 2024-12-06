@@ -31,3 +31,8 @@ body {
   border-left: var(--border-color) 1px solid;
   border-right: var(--border-color) 1px solid;
 }
+.nav{
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-top: 1rem;
+}

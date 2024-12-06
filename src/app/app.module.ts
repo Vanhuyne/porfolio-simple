@@ -9,6 +9,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ContactComponent } from './contact/contact.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,10 @@ import { NavbarComponent } from './navbar/navbar.component';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],

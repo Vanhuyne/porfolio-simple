@@ -1,10 +1,17 @@
-<nav class="px-10 flex justify-between items-center ">
+<nav class="px-10 flex justify-between items-center fixed z-50">
     <!-- Profile Image -->
-    <div class="flex items-center">
+
+    <div class="flex items-center space-x-4" >
+      <span class="text-xl ">
+      {{ getWeatherIcon() }}
+      </span>
+      <span class="text-gray-500 text-sm">
+        {{ weatherData.main.temp | number:'1.0-1' }}°C
+      </span>
     </div>
   
     <!-- Center Navigation Links -->
-    <div class="flex space-x-6 bg-gray-800 px-6 py-2 rounded-full">
+    <div class="flex items-center space-x-6 bg-gray-800 px-6 py-2 rounded-full">
       <a
         routerLink="/about"
         routerLinkActive="text-teal-500"
@@ -26,14 +33,7 @@
       >
         Projects
       </a>
-      <a
-        routerLink="/speaking"
-        routerLinkActive="text-teal-500"
-        class="text-white hover:text-teal-500 transition duration-300"
-      >
-        Contact
-      </a>
-  
+      
     </div>
   
     <!-- Theme Toggle Icon -->
