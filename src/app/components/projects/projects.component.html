@@ -1,0 +1,44 @@
+<div>
+  <hr class="my-4">
+</div>
+<div class="px-8">
+  <div class="flex items-center py-4">
+    <hr class="flex-grow max-w-10 border-gray-500 mr-4 w-3">
+    <span class="text-gray-500 text-sm">PROJECTS</span>
+  </div>
+
+  <!-- Project List -->
+  <div class="space-y-6">
+    <div *ngFor="let project of projects"
+      class="group relative flex items-start bg-gray-700 border border-gray-700 rounded-sm p-6 transition duration-300 hover:bg-gray-800 hover:cursor-pointer">
+      <span
+        class="absolute top-6 right-6 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:text-teal-500 transition-all duration-300 text-sm">
+        View project
+        <i class="fas fa-arrow-right ml-2 rotate-[-45deg] inline-block"></i>
+      </span>
+      <!-- Time Spent -->
+      <div class="w-7/12 text-gray-400 font-medium pr-4">
+        <p class="text-sm">{{ project.timeSpent }}</p>
+      </div>
+
+      <!-- Project Details -->
+      <div class="flex-grow pr-16">
+        <!-- Project Title -->
+        <h2 class="text-lg font-semibold text-gray-300 mb-2">{{ project.title }}</h2>
+
+        <!-- Project Description -->
+        <p class="text-gray-400 text-sm mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ad
+          dignissimos voluptatum sapiente quam iste dolores, minus reprehenderit recusandae corporis quibusdam eligendi
+          minima nostrum, aperiam nulla officia magnam repudiandae optio!</p>
+
+        <!-- Technologies -->
+        <div class="flex flex-wrap gap-2 mb-2">
+          <span *ngFor="let tech of project.technologies"
+            class="inline-block bg-gray-500 text-white px-3 py-1 rounded-full text-xs">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

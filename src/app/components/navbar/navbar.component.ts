@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { AppComponent } from '../app.component';
-import { WeatherServiceService } from '../serivce/weather-service.service';
+import { AppComponent } from '../../app.component';
+import { WeatherServiceService } from '../../serivce/weather-service.service';
+
 
 @Component({
   selector: 'app-navbar',

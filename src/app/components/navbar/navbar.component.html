@@ -1,9 +1,9 @@
-<nav class="px-10 flex justify-between items-center fixed z-50">
-    <!-- Profile Image -->
-
-    <div class="flex items-center space-x-4" >
-      <span class="text-xl ">
-      {{ getWeatherIcon() }}
+<nav class="fixed top-0 left-0 right-0 w-full z-50">
+  <!-- Profile Image -->
+    <div class="container mx-auto flex justify-between items-center py-4 px-10 ">
+    <div class="flex items-center space-x-4">
+      <span class="text-xl">
+        {{ getWeatherIcon() }}
       </span>
       <span class="text-gray-500 text-sm">
         {{ weatherData.main.temp | number:'1.0-1' }}°C
@@ -46,5 +46,5 @@
 
       </button>
     </div>
+  </div>
   </nav>
-  

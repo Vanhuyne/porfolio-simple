@@ -21,6 +21,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Inter', sans-serif;
 }
 
 .container {
@@ -31,8 +32,6 @@ body {
   border-left: var(--border-color) 1px solid;
   border-right: var(--border-color) 1px solid;
 }
-.nav{
-  max-width: 1080px;
-  margin: 0 auto;
-  padding-top: 1rem;
+h1, h2 , h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
 }
