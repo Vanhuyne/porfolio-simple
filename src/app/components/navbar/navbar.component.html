@@ -1,49 +1,46 @@
 <nav class="fixed top-0 left-0 right-0 w-full z-50">
   <!-- Profile Image -->
-    <div class="container mx-auto flex justify-between items-center py-4 px-10 ">
+  <div class="container mx-auto flex justify-between items-center py-4 px-10 ">
     <div class="flex items-center space-x-4">
       <span class="text-base">
-       VietNam {{ getWeatherIcon() }}
+        VietNam {{ getWeatherIcon() }}
       </span>
       <span class="text-gray-500 text-sm">
         {{ weatherData.main.temp | number:'1.0-1' }}°C
       </span>
     </div>
-  
+
     <!-- Center Navigation Links -->
     <div class="flex items-center space-x-6 bg-gray-800 px-6 py-2 rounded-full">
-      <a
-        routerLink="/"
-        (click)="scrollToSection('about')"
+      <a routerLink="/" (click)="scrollToSection('about')"
         class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
-        [class.text-teal-500]="activeSection === 'about'"
-        >
+        [class.text-teal-500]="activeSection === 'about'">
         About
       </a>
-      <a
-        routerLink="/articles"
-        routerLinkActive="text-teal-500"
-        class="text-gray-200 hover:text-teal-500 transition duration-300"
-      >
+      <a routerLink="/articles" 
+        class="text-gray-200 hover:text-teal-500 transition duration-300">
         Articles
       </a>
-      <a (click)="scrollToSection('projects')" 
-   class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
-   [class.text-teal-500]="activeSection === 'projects'">
-   Projects
-</a>
-      
+
+      <a routerLink="/" (click)="scrollToSection('projects')" 
+        class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
+        >
+        Projects
+      </a>
+      <a routerLink="/skills" routerLinkActive="text-teal-500"
+        class="text-gray-200 hover:text-teal-500 transition duration-300">
+        Skills
+      </a>
+
     </div>
-  
+
     <!-- Theme Toggle Icon -->
     <div class="flex items-center">
-      <button
-        class="p-2 px-4 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300"
-        (click)="toggleTheme()"
-      >
-      <i class="fas" [ngClass]="isDarkMode ? 'fa-sun text-teal-500 ' : 'fa-moon text-white'"></i>
+      <button class="p-2 px-4 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300"
+        (click)="toggleTheme()">
+        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun text-teal-500 ' : 'fa-moon text-white'"></i>
 
       </button>
     </div>
   </div>
-  </nav>
+</nav>

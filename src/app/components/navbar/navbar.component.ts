@@ -54,7 +54,6 @@ export class NavbarComponent {
     return '🌞'; // Default to sunny
   }
 
-
   scrollToSection(sectionId: string) {
     const section = document.getElementById(sectionId);
     if (section) {
