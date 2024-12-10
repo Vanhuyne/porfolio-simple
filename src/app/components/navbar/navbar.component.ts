@@ -9,12 +9,14 @@ import { WeatherServiceService } from '../../serivce/weather-service.service';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
   weatherData: any;
+  activeSection: string = '';
 
   constructor(
     private appComponent: AppComponent,
-    private weatherService: WeatherServiceService) {}
-  
+    private weatherService: WeatherServiceService) { }
+
   get isDarkMode(): boolean {
     return this.appComponent.isDarkMode;
   }
@@ -27,7 +29,7 @@ export class NavbarComponent {
     this.weatherService.getWeatherData().subscribe(data => {
       this.weatherData = data;
       console.log(this.weatherData);
-      
+
     });
   }
 
@@ -43,13 +45,22 @@ export class NavbarComponent {
     if (description.includes('rain')) return '🌧️';
     if (description.includes('cloud')) return '⛅';
     if (windSpeed > 5) return '💨'; // Windy condition
-    
+
     // Temperature-based icons with a focus on sunny conditions
     if (temp > 35) return '🌞🔥'; // Very hot
     if (temp > 30) return '🌞';   // Hot and sunny
     if (temp > 25) return '☀️';   // Warm and sunny
-    
+
     return '🌞'; // Default to sunny
+  }
+
+
+  scrollToSection(sectionId: string) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView();
+      this.activeSection = sectionId;
+    }
   }
 
 }

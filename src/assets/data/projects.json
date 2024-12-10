@@ -1,0 +1,65 @@
+{
+    "projects": [
+      {
+        "id": 1,
+        "title": "🛒 E-commerce Platform",
+        "description": "A full-stack e-commerce solution with features including user authentication, product catalog, shopping cart, payment integration, and admin panel.",
+        "technologies": [
+          "Spring Boot",
+          "Angular",
+          "MySQL",
+          "JWT",
+          "Stripe",
+          "Firebase",
+          "Maven"
+        ],
+        "imageUrl": "/assets/images/ecommerce-project.png",
+        "githubLink": "https://github.com/Vanhuyne/book-store-app",
+        "demoLink": "http://localhost:4200",
+        "timeSpent": "2 months"
+      },
+      {
+        "id": 2,
+        "title": "🍽️ Food Order Delivery",
+        "description": "A scalable food delivery system built with Spring Boot microservices architecture, featuring API Gateway, Service Discovery, and multiple specialized services for users, restaurants, orders, and notifications.",
+        "technologies": [
+          "Spring Boot 3.3.4",
+          "Java 21",
+          "Spring Cloud",
+          "Angular 17",
+          "MySQL",
+          "Kafka",
+          "Docker",
+          "JWT",
+          "TailwindCSS",
+          "OpenAPI"
+        ],
+        "imageUrl": "/assets/images/food-delivery.png",
+        "githubLink": "https://github.com/Vanhuyne/food-order-microservice",
+        "demoLink": "http://localhost:8080",
+        "timeSpent": "2 months"
+      },
+      {
+        "id": 3,
+        "title": "🌐 SYNCIO - Social Media Platform",
+        "description": "A comprehensive social media platform with features including user authentication, real-time messaging, media sharing, label system, and admin dashboard. Built with Spring Boot, Angular, and various modern technologies.",
+        "technologies": [
+          "Spring Boot 3.2.5",
+          "Angular 16",
+          "MySQL 8.0",
+          "Redis",
+          "RabbitMQ",
+          "JWT",
+          "Firebase",
+          "Docker",
+          "Python 3.9",
+          "Electron",
+          "Capacitor"
+        ],
+        "imageUrl": "/assets/images/syncio-project.png",
+        "githubLink": "https://github.com/56duong/syncio-webapp",
+        "demoLink": "https://syncio-demo.com",
+        "timeSpent": "3 months"
+      }
+    ]
+  }

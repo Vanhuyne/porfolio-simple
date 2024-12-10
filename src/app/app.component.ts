@@ -12,10 +12,14 @@ export class AppComponent {
   ngOnInit() {
     // Initialize theme from localStorage or system preference
     const savedTheme = localStorage.getItem('theme');
+    
     if (savedTheme) {
+      // Use saved theme preference
       this.isDarkMode = savedTheme === 'dark';
     } else {
-      this.isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      // Set default dark theme if no preference saved
+      this.isDarkMode = true;
+      localStorage.setItem('theme', 'dark');
     }
     this.updateTheme();
   }
