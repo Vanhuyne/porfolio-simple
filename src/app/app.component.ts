@@ -15,11 +15,11 @@ export class AppComponent {
     
     if (savedTheme) {
       // Use saved theme preference
-      this.isDarkMode = savedTheme === 'dark';
+      this.isDarkMode = savedTheme === 'light';
     } else {
       // Set default dark theme if no preference saved
-      this.isDarkMode = true;
-      localStorage.setItem('theme', 'dark');
+      this.isDarkMode = false;
+      localStorage.setItem('theme', 'light');
     }
     this.updateTheme();
   }

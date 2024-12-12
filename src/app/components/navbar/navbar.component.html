@@ -11,10 +11,10 @@
     </div>
 
     <!-- Center Navigation Links -->
-    <div class="flex items-center space-x-6 bg-gray-800 px-6 py-2 rounded-full">
+    <div class="flex items-center space-x-6 bg-gray-800 px-6 py-2 rounded-full text-base">
       <a routerLink="/" (click)="scrollToSection('about')"
         class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
-        [class.text-teal-500]="activeSection === 'about'">
+        >
         About
       </a>
       <a routerLink="/articles" 
@@ -27,11 +27,6 @@
         >
         Projects
       </a>
-      <a routerLink="/skills" routerLinkActive="text-teal-500"
-        class="text-gray-200 hover:text-teal-500 transition duration-300">
-        Skills
-      </a>
-
     </div>
 
     <!-- Theme Toggle Icon -->

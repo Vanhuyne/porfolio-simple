@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #ffffff;
+  --bg-primary: rgb(250, 250, 250);
   --text-primary: #000000;
   --border-color: rgb(222, 222, 222);
-  --container-bg: #fbf8f8;
+  --container-bg: rgb(255, 255, 255);
 }
 
 
