@@ -2,7 +2,7 @@
     "projects": [
       {
         "id": 1,
-        "title": "🛒 E-commerce Platform",
+        "title": "Book Store App",
         "description": "A full-stack e-commerce solution with features including user authentication, product catalog, shopping cart, payment integration, and admin panel.",
         "technologies": [
           "Spring Boot",
@@ -13,14 +13,14 @@
           "Firebase",
           "Maven"
         ],
-        "imageUrl": "/assets/images/ecommerce-project.png",
+        "imageUrl": "https://as2.ftcdn.net/v2/jpg/05/43/78/87/1000_F_543788726_BGzzl0LEcsYvpkVsSS3LfhZJQnQQinuU.jpg",
         "githubLink": "https://github.com/Vanhuyne/book-store-app",
         "demoLink": "http://localhost:4200",
         "timeSpent": "2 months"
       },
       {
         "id": 2,
-        "title": "🍽️ Food Order Delivery",
+        "title": "Food Order Delivery",
         "description": "A scalable food delivery system built with Spring Boot microservices architecture, featuring API Gateway, Service Discovery, and multiple specialized services for users, restaurants, orders, and notifications.",
         "technologies": [
           "Spring Boot 3.3.4",
@@ -34,14 +34,14 @@
           "TailwindCSS",
           "OpenAPI"
         ],
-        "imageUrl": "/assets/images/food-delivery.png",
+        "imageUrl": "https://as2.ftcdn.net/v2/jpg/05/08/68/85/1000_F_508688587_t3QvFLVGwpaUvHjJFs2ziDoGlqwKizoU.jpg",
         "githubLink": "https://github.com/Vanhuyne/food-order-microservice",
         "demoLink": "http://localhost:8080",
         "timeSpent": "2 months"
       },
       {
         "id": 3,
-        "title": "🌐 SYNCIO - Social Media Platform",
+        "title": "SYNCIO",
         "description": "A comprehensive social media platform with features including user authentication, real-time messaging, media sharing, label system, and admin dashboard. Built with Spring Boot, Angular, and various modern technologies.",
         "technologies": [
           "Spring Boot 3.2.5",
@@ -56,7 +56,7 @@
           "Electron",
           "Capacitor"
         ],
-        "imageUrl": "/assets/images/syncio-project.png",
+        "imageUrl": "https://as1.ftcdn.net/v2/jpg/03/55/54/12/1000_F_355541280_pZwtxLDJ9ooMdkQkIWTqbEX3GfGVuJfa.jpg",
         "githubLink": "https://github.com/56duong/syncio-webapp",
         "demoLink": "https://syncio-demo.com",
         "timeSpent": "3 months"

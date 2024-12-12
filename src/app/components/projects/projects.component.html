@@ -9,43 +9,52 @@
 
   <!-- Project List -->
   <div class="space-y-6">
-    <div *ngFor="let project of projects" (click)="openProject(project.githubLink)"
-      class="group relative flex bg-gray-700 border border-gray-700 rounded-md p-6 transition duration-300 hover:bg-gray-800 hover:cursor-pointer">
-      <!-- View Label -->
-      <span
-        class=" text-sm absolute top-6 right-6 text-gray-400 opacity-0 group-hover:opacity-100 group-hover:text-teal-500 transition-all duration-300">
-        View project
-        <i class="fas fa-arrow-right ml-2 rotate-[-45deg] inline-block"></i>
-      </span>
-
-      <!-- Grid Layout Container -->
-      <div class="grid grid-cols-12 gap-6 w-full">
-        <!-- Time Spent Column -->
-        <div class="col-span-3">
-          <p class="text-gray-400 text-sm">{{ project.timeSpent }}</p>
-        </div>
-
-        <!-- Project Details Column -->
-        <div class="col-span-9 pr-4 w-4/5">
-          <!-- Project Title -->
-          <h2 class="text-base font-semibold text-gray-300 mb-2">{{ project.title }}</h2>
-
-          <!-- Project Description -->
-          <p class="text-gray-400 text-sm mb-4 ">{{ project.description }}</p>
-
-          <!-- Technologies -->
-          <div class="flex flex-wrap gap-2">
-            <div class="flex flex-wrap gap-2">
-              <span *ngFor="let tech of project.technologies.slice(0, 5); let i = index"
-                class="px-3 py-1 text-xs text-gray-300 bg-gray-600 rounded-full">
-                {{ tech }}
-              </span>
-              <span *ngIf="project.technologies.length > 5" class="px-3 py-1 text-xs text-gray-400 rounded-full">
-                +{{ project.technologies.length - 5 }} more
-              </span>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Project Card -->
+      <div 
+        *ngFor="let project of projects" 
+        class="border rounded-md p-4 
+               transition duration-300 hover:border-gray-500  
+               hover:cursor-pointer group relative"
+        (click)="openProject(project.githubLink)">
+        
+        <!-- Internal Grid for Card Content -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- Project Image/Placeholder (3 columns) -->
+          <div class="col-span-3 hidden md:block">
+            <div  class="w-full aspect-square  rounded-md p-2
+                        flex items-center justify-center text-gray-400">
+              <img class="w-full h-full object-cover border border-gray-200" src="{{ project.imageUrl }}" alt="">
             </div>
+          </div>
+
+
+
+  
+          <!-- Project Details (9 columns) -->
+          <div class="col-span-12 md:col-span-9">
+            <!-- Project Title -->
+            <h3 class="text-lg font-semibold text-gray-400 mb-2">
+              {{ project.title }}
+            </h3>
+  
+            <!-- Project Description -->
+            <p class="text-gray-400 text-xs mb-4">
+              {{ project.description }}
+            </p>
+  
+              <!-- View Project Label -->
+        <span class="absolute top-6 right-6 text-sm text-gray-400 
+                     opacity-0 group-hover:opacity-100 
+                     group-hover:text-teal-500 
+                     transition-all duration-300">
+          
+          <i class="fas fa-arrow-right ml-2 rotate-[-45deg] inline-block"></i>
+        </span>
+            
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
