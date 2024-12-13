@@ -1,0 +1,10 @@
+/* ...existing code... */
+
+
+button.active {
+  font-weight: bold;
+  color: black;
+  border-bottom: 4px solid rgb(31, 140, 250);
+  display: inline-block;
+  width: auto;
+}
