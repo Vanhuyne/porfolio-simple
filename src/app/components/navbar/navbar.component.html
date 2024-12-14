@@ -6,38 +6,36 @@
 
   <!-- Middle Section: Navigation Links -->
   <div class="flex flex-col items-start  text-base">
-    <a routerLink="/" (click)="scrollToSection('home')"
+    <a [routerLink]="'/'" [ngClass]="{'active-link': isActive('/')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center  rounded-3xl  hover:bg-gray-300">
-      <i class="fas fa-home text-2xl mr-4"></i> Home
+      <i class="fas fa-home text-xl mr-4"></i> Home
     </a>
-    <a routerLink="/" (click)="scrollToSection('skill')"
-      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-brands fa-readme text-2xl mr-5"></i> Skills
+    <a [routerLink]="'/skills'" [ngClass]="{'active-link': isActive('/skills')}" class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-regular fa-lightbulb text-xl mr-5"></i> Skills
     </a>
-    <a routerLink="/" (click)="scrollToSection('projects')"
+    <a [routerLink]="'/projects'" [ngClass]="{'active-link': isActive('/projects')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-regular fa-file text-2xl mr-5"></i> Projects
+      <i class="fa-regular fa-file text-xl mr-5"></i> Projects
     </a>
-    <a routerLink="/" (click)="scrollToSection('home')"
-      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-solid fa-magnifying-glass text-2xl mr-5"></i> Explore
+    <a [routerLink]="'/explore'" [ngClass]="{'active-link': isActive('/explore')}" class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-solid fa-magnifying-glass text-xl mr-5"></i> Explore
     </a>
-    <a routerLink="/notification" (click)="scrollToSection('notification')"
+    <a [routerLink]="'/notification'" [ngClass]="{'active-link': isActive('/notification')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-regular fa-bell text-2xl mr-5"></i>Notification
+      <i class="fa-regular fa-bell text-xl mr-5"></i>Notification
     </a>
-    <a routerLink="/message" (click)="scrollToSection('message')"
+    <a [routerLink]="'/message'" [ngClass]="{'active-link': isActive('/message')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fas fa-envelope text-2xl mr-5"></i> Message
+      <i class="fas fa-envelope text-xl mr-5"></i> Message
     </a>
 
-    <a routerLink="/communities" (click)="scrollToSection('communities')"
+    <a [routerLink]="'/communities'" [ngClass]="{'active-link': isActive('/communities')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-solid fa-user-group text-2xl mr-5"></i> Communities
+      <i class="fa-solid fa-user-group text-xl mr-5"></i> Communities
     </a>
   </div>
   <div class="ms-2 py-2">
-    <button (click)="scrollToSection('more')"
+    <button 
       class=" text-base w-56 rounded-3xl py-3 px-6 text-white bg-black hover:bg-gray-500 text-center transition duration-300 cursor-pointer ">
       More
     </button>

@@ -1,21 +1,27 @@
 import { Component } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { WeatherServiceService } from '../../serivce/weather-service.service';
-
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
 
   weatherData: any;
-  activeSection: string = '';
-
+  activeLink: string = "";
   constructor(
     private appComponent: AppComponent,
-    private weatherService: WeatherServiceService) { }
+    private weatherService: WeatherServiceService,
+    private router: Router) {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.activeLink = event.urlAfterRedirects;
+      }
+    });
+  }
 
   get isDarkMode(): boolean {
     return this.appComponent.isDarkMode;
@@ -54,12 +60,7 @@ export class NavbarComponent {
     return '🌞'; // Default to sunny
   }
 
-  scrollToSection(sectionId: string) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView();
-      this.activeSection = sectionId;
-    }
+  isActive(link: string): boolean {
+    return this.activeLink === link;
   }
-
 }
