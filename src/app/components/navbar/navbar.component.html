@@ -1,41 +1,62 @@
-<nav class="fixed top-0 left-0 right-0 w-full z-50">
-  <!-- Profile Image -->
-  <div class="container mx-auto flex justify-between items-center py-4 px-10 ">
-    <div class="flex items-center space-x-4">
-      <span class="text-base">
-        VietNam {{ getWeatherIcon() }}
-      </span>
-      <span class="text-gray-500 text-sm">
-        {{ weatherData.main.temp | number:'1.0-1' }}°C
-      </span>
+<nav class="fixed px-2 w-3/12 h-full flex flex-col items-start justify-between">
+  <!-- Top Section: Logo/Profile Image -->
+  <div class=" ps-2">
+    <img src="assets/img-icons/x.jpg" alt="Logo" class="w-10 h-10">
+  </div>
+
+  <!-- Middle Section: Navigation Links -->
+  <div class="flex flex-col items-start  text-base">
+    <a routerLink="/" (click)="scrollToSection('home')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center  rounded-3xl  hover:bg-gray-300">
+      <i class="fas fa-home text-2xl mr-4"></i> Home
+    </a>
+    <a routerLink="/" (click)="scrollToSection('skill')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-brands fa-readme text-2xl mr-5"></i> Skills
+    </a>
+    <a routerLink="/" (click)="scrollToSection('projects')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-regular fa-file text-2xl mr-5"></i> Projects
+    </a>
+    <a routerLink="/" (click)="scrollToSection('home')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-solid fa-magnifying-glass text-2xl mr-5"></i> Explore
+    </a>
+    <a routerLink="/notification" (click)="scrollToSection('notification')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-regular fa-bell text-2xl mr-5"></i>Notification
+    </a>
+    <a routerLink="/message" (click)="scrollToSection('message')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fas fa-envelope text-2xl mr-5"></i> Message
+    </a>
+
+    <a routerLink="/communities" (click)="scrollToSection('communities')"
+      class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
+      <i class="fa-solid fa-user-group text-2xl mr-5"></i> Communities
+    </a>
+  </div>
+  <div class="ms-2 py-2">
+    <button (click)="scrollToSection('more')"
+      class=" text-base w-56 rounded-3xl py-3 px-6 text-white bg-black hover:bg-gray-500 text-center transition duration-300 cursor-pointer ">
+      More
+    </button>
+  </div>
+  <div class="ps-2 opacity-0">
+    <img src="assets/img-icons/x.jpg" alt="Logo" class="w-10 h-10">
+  </div>
+
+  <!-- Bottom Section: profile  -->
+  <div class="flex flex-col items-center space-y-2 pl-2 mb-6 ">
+    <div class="flex items-center ">
+      <img src="assets/avatar.png" class="w-10 h-10 object-cover rounded-full mr-2" alt="Avatar" />
+      <div class="flex flex-col items-start">
+        <span class="text-gray-800 text-sx">Van Huy</span>
+        <span class="text-gray-400 text-sx">ThanVanHuy25640</span>
+      </div>
+      <div class="ml-8"><i class="fa-solid fa-ellipsis"></i></div>
     </div>
 
-    <!-- Center Navigation Links -->
-    <div class="flex items-center space-x-6 bg-gray-800 px-6 py-2 rounded-full text-base">
-      <a routerLink="/" (click)="scrollToSection('about')"
-        class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
-        >
-        About
-      </a>
-      <a routerLink="/articles" 
-        class="text-gray-200 hover:text-teal-500 transition duration-300">
-        Articles
-      </a>
-
-      <a routerLink="/" (click)="scrollToSection('projects')" 
-        class="text-gray-200 hover:text-teal-500 transition duration-300 cursor-pointer"
-        >
-        Projects
-      </a>
-    </div>
-
-    <!-- Theme Toggle Icon -->
-    <div class="flex items-center">
-      <button class="p-2 px-4 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300"
-        (click)="toggleTheme()">
-        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun text-teal-500 ' : 'fa-moon text-white'"></i>
-
-      </button>
-    </div>
   </div>
 </nav>
+<!-- Bottom Section: Profile Details -->
