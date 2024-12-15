@@ -26,7 +26,7 @@ export class SkillsComponent {
     { name: 'Postman', icon: 'assets/img-icons/postman.png' },
     { name: 'MySQL', icon: 'assets/img-icons/mysql.png' },
     { name: 'Docker', icon: 'assets/img-icons/docker.png' },
-    { name: 'Spring', icon: 'assets/img-icons/springboot.png' },
+    { name: 'Spring Boot', icon: 'assets/img-icons/springboot.png' },
     { name: 'Bootstrap', icon: 'assets/img-icons/bootstrap.png' },
     { name: 'Tailwindcss', icon: 'assets/img-icons/tailwindcss.png' },
     { name: 'Github', icon: 'assets/img-icons/github.png' }

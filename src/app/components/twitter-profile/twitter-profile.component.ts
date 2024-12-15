@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UserProfile } from '../../interface/UserProfile';
-import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

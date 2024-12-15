@@ -27,7 +27,6 @@ body {
 .container {
   max-width: 960px;
   margin: 0 auto;
-  padding-top: 1rem;
   background-color: var(--container-bg);
   border-left: var(--border-color) 1px solid;
   border-right: var(--border-color) 1px solid;
