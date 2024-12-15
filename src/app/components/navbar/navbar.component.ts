@@ -9,13 +9,14 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-
   weatherData: any;
   activeLink: string = "";
+  
   constructor(
     private appComponent: AppComponent,
     private weatherService: WeatherServiceService,
-    private router: Router) {
+    private router: Router
+  ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         this.activeLink = event.urlAfterRedirects;
@@ -35,29 +36,25 @@ export class NavbarComponent {
     this.weatherService.getWeatherData().subscribe(data => {
       this.weatherData = data;
       console.log(this.weatherData);
-
-    });
+  });
   }
 
-  // Refined Weather Icon Method for Vietnam's Climate
   getWeatherIcon(): string {
     if (!this.weatherData) return '🌞';
 
-    const temp = this.weatherData.main.temp;
-    const windSpeed = this.weatherData.wind.speed;
+    const { temp } = this.weatherData.main;
+    const { speed: windSpeed } = this.weatherData.wind;
     const description = this.weatherData.weather[0].description.toLowerCase();
 
-    // Check for specific weather conditions
     if (description.includes('rain')) return '🌧️';
     if (description.includes('cloud')) return '⛅';
-    if (windSpeed > 5) return '💨'; // Windy condition
+    if (windSpeed > 5) return '💨';
 
-    // Temperature-based icons with a focus on sunny conditions
-    if (temp > 35) return '🌞🔥'; // Very hot
-    if (temp > 30) return '🌞';   // Hot and sunny
-    if (temp > 25) return '☀️';   // Warm and sunny
+    if (temp > 35) return '🌞🔥';
+    if (temp > 30) return '🌞';
+    if (temp > 25) return '☀️';
 
-    return '🌞'; // Default to sunny
+    return '🌞';
   }
 
   isActive(link: string): boolean {
