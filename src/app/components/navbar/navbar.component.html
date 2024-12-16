@@ -47,14 +47,13 @@
   <!-- Bottom Section: profile  -->
   <div class="flex flex-col items-center space-y-2 pl-2 mb-2">
     <div class="flex items-center ">
-      <img src="assets/avatar.png" class="w-10 h-10 object-cover rounded-full mr-2" alt="Avatar" />
+      <img [src]="profileData?.profileImage || 'assets/avatar.png'" class="w-10 h-10 object-cover rounded-full mr-2" alt="Avatar" />
       <div class="flex flex-col items-start">
-        <span class="text-gray-800 text-sx">Van Huy</span>
-        <span class="text-gray-400 text-sx">ThanVanHuy25640</span>
+        <span class="text-gray-800 text-sx">{{ profileData?.name || 'Van Huy' }}</span>
+        <span class="text-gray-400 text-sx">{{ profileData?.handle || 'ThanVanHuy25640' }}</span>
       </div>
       <div class="ml-7"><i class="fa-solid fa-ellipsis"></i></div>
     </div>
-
   </div>
 </nav>
 <!-- Bottom Section: Profile Details -->

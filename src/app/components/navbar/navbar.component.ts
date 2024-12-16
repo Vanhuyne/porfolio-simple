@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { AppComponent } from '../../app.component';
 import { WeatherServiceService } from '../../serivce/weather-service.service';
 import { Router, NavigationEnd } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
+import { UserProfile } from '../../interface/UserProfile';
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +13,13 @@ import { Router, NavigationEnd } from '@angular/router';
 export class NavbarComponent {
   weatherData: any;
   activeLink: string = "";
+  profileData: UserProfile | undefined;
   
   constructor(
     private appComponent: AppComponent,
     private weatherService: WeatherServiceService,
-    private router: Router
+    private router: Router,
+    private http: HttpClient
   ) {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
@@ -36,7 +40,15 @@ export class NavbarComponent {
     this.weatherService.getWeatherData().subscribe(data => {
       this.weatherData = data;
       console.log(this.weatherData);
-  });
+    });
+    this.loadProfileData();
+  }
+
+  loadProfileData(): void {
+    this.http.get<UserProfile>('assets/data/profile.json').subscribe(data => {
+      this.profileData = data;
+      console.log(this.profileData);
+    });
   }
 
   getWeatherIcon(): string {
