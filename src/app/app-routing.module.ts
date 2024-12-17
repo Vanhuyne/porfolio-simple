@@ -3,13 +3,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 const routes: Routes = [
   // when we go to localhost:4200/ then show HomeComponent
   {path : '', component: HomeComponent},
   {path : 'skills', component: SkillsComponent},
   {path : 'contact', component: ContactComponent},
-  { path: 'skills', component: SkillsComponent },
+  { path: 'projects', component: ProjectsComponent },
+  {path : '**', component: HomeComponent},
+  // {path: 'contact', component: ContactComponent}
 ];
 
 @NgModule({

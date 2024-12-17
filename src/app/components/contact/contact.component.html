@@ -1,1 +1,34 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam molestias, temporibus quae nobis, officiis architecto a, reiciendis iste repellendus iusto placeat illo recusandae! Ab modi alias, ipsum et rerum provident.</p>
+<div class="px-8 pb-4 py-5 border-l border-r  flex flex-col contact">
+  <div class="flex items-center py-4">
+    <hr class="flex-grow max-w-10 border-gray-500 mr-4 w-3">
+    <span class="text-gray-500 text-sm">CONTACT</span>
+  </div>
+  <!-- Contact Form -->
+  <div class="flex-grow ">
+    <form class="w-full max-w-lg bg-white p-8 rounded-md border" (ngSubmit)="sendEmail(contactForm)" #contactForm="ngForm">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+          Name
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Your Name" ngModel name="name" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+          Email
+        </label>
+        <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Your Email" ngModel name="email" required>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="message">
+          Message
+        </label>
+        <textarea class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="message" rows="4" placeholder="Your Message" ngModel name="message" required></textarea>
+      </div>
+      <div class="flex items-center justify-between">
+        <button class="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+          Send
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

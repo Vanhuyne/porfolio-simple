@@ -24,7 +24,7 @@
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
       <i class="fa-regular fa-bell text-xl mr-5"></i>Notification
     </a>
-    <a [routerLink]="'/message'" [ngClass]="{'active-link': isActive('/message')}"
+    <a [routerLink]="'/contact'" [ngClass]="{'active-link': isActive('/contact')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
       <i class="fas fa-envelope text-xl mr-5"></i> Message
     </a>
@@ -49,10 +49,10 @@
     <div class="flex items-center ">
       <img [src]="profileData?.profileImage || 'assets/avatar.png'" class="w-10 h-10 object-cover rounded-full mr-2" alt="Avatar" />
       <div class="flex flex-col items-start">
-        <span class="text-gray-800 text-sx">{{ profileData?.name || 'Van Huy' }}</span>
-        <span class="text-gray-400 text-sx">{{ profileData?.handle || 'ThanVanHuy25640' }}</span>
+        <span class="text-gray-800 text-sm">{{ profileData?.name || 'Van Huy' }}</span>
+        <span class="text-gray-400 text-sm">{{ profileData?.handle || 'ThanVanHuy25640' }}</span>
       </div>
-      <div class="ml-7"><i class="fa-solid fa-ellipsis"></i></div>
+      <div class="ml-4"><i class="fa-solid fa-ellipsis"></i></div>
     </div>
   </div>
 </nav>

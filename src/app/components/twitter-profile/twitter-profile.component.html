@@ -42,7 +42,8 @@
       <p class="mt-2 text-sm">{{ profile.bio }}</p>
       <div class="flex space-x-4 mt-2 text-sm text-gray-500">
         <span><i class="fa-solid fa-map-marker-alt px-2"></i>{{ profile.location }}</span>
-        <span><i class="fa-brands fa-github px-2"></i><a class="cursor-pointer text-blue-600">{{ profile.website.slice(0,15) }}...</a></span>
+        <span><i class="fa-brands fa-github px-2"></i><a href="https://github.com/Vanhuyne" class="cursor-pointer text-blue-600" target="_blank">{{ profile.website.slice(0,15) }}...</a></span>
+        <span><i class="fa-brands fa-linkedin px-2"></i><a href="https://www.linkedin.com/in/v%C4%83n-huy-0845161a1/" class="cursor-pointer text-blue-600" target="_blank">{{ "https://www.linkedin.com/in/v%C4%83n-huy-0845161a1/".slice(0,15) }}...</a></span>
         <span><i class="fa-solid fa-calendar-days px-2"></i>Joined {{ profile.joined }}</span>
       </div>
     </div>

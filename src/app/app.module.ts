@@ -10,8 +10,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FooterComponent } from './components/footer/footer.component';
 import { TwitterProfileComponent } from './components/twitter-profile/twitter-profile.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,10 +22,10 @@ import { TwitterProfileComponent } from './components/twitter-profile/twitter-pr
     SkillsComponent,
     ContactComponent,
     NavbarComponent,
-    FooterComponent,
     TwitterProfileComponent,
   ],
   imports: [
+    FormsModule,
     HttpClientModule,
     BrowserModule,
     AppRoutingModule
