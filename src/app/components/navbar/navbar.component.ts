@@ -11,13 +11,12 @@ import { UserProfile } from '../../interface/UserProfile';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  weatherData: any;
   activeLink: string = "";
   profileData: UserProfile | undefined;
   
   constructor(
     private appComponent: AppComponent,
-    private weatherService: WeatherServiceService,
+    
     private router: Router,
     private http: HttpClient
   ) {
@@ -37,10 +36,7 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    this.weatherService.getWeatherData().subscribe(data => {
-      this.weatherData = data;
-      console.log(this.weatherData);
-    });
+   
     this.loadProfileData();
   }
 
@@ -51,23 +47,7 @@ export class NavbarComponent {
     });
   }
 
-  getWeatherIcon(): string {
-    if (!this.weatherData) return '🌞';
-
-    const { temp } = this.weatherData.main;
-    const { speed: windSpeed } = this.weatherData.wind;
-    const description = this.weatherData.weather[0].description.toLowerCase();
-
-    if (description.includes('rain')) return '🌧️';
-    if (description.includes('cloud')) return '⛅';
-    if (windSpeed > 5) return '💨';
-
-    if (temp > 35) return '🌞🔥';
-    if (temp > 30) return '🌞';
-    if (temp > 25) return '☀️';
-
-    return '🌞';
-  }
+  
 
   isActive(link: string): boolean {
     return this.activeLink === link;

@@ -1,0 +1,7 @@
+<div class="weather-info">
+    <h2 class="text-xl font-bold ">Vietnam</h2>
+    <div class="py-2" *ngIf="weatherData">
+      <p >{{ weatherData.main.temp }}°C <span class="px-2"> {{ getWeatherIcon() }}</span></p>
+    </div>
+    
+  </div>

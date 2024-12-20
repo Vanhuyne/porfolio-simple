@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TwitterProfileComponent } from './components/twitter-profile/twitter-profile.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherComponent } from './components/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     ContactComponent,
     NavbarComponent,
     TwitterProfileComponent,
+    WeatherComponent,
   ],
   imports: [
     FormsModule,
