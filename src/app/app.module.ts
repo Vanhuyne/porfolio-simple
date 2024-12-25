@@ -13,6 +13,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { TwitterProfileComponent } from './components/twitter-profile/twitter-profile.component';
 import { FormsModule } from '@angular/forms';
 import { WeatherComponent } from './components/weather/weather.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
+import { ResumeComponent } from './components/resume/resume.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
 
 @NgModule({
   declarations: [
@@ -25,8 +29,10 @@ import { WeatherComponent } from './components/weather/weather.component';
     NavbarComponent,
     TwitterProfileComponent,
     WeatherComponent,
+    ResumeComponent,
   ],
   imports: [
+    PdfViewerModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,
@@ -36,3 +42,5 @@ import { WeatherComponent } from './components/weather/weather.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+platformBrowserDynamic().bootstrapModule(AppModule)

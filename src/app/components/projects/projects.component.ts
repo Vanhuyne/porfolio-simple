@@ -5,11 +5,12 @@ import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrl: './projects.component.css'
+  styleUrl: './projects.component.css',
+  
 })
 export class ProjectsComponent implements OnInit {
 
-  projects: Project[] = []
+  projects: Project[] = [];
   constructor(private http: HttpClient) { }
   ngOnInit(): void {
     this.http.get<{projects: Project[]}>('assets/data/projects.json').subscribe(data => {

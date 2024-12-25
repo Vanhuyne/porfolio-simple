@@ -13,7 +13,7 @@
           "Firebase",
           "Maven"
         ],
-        "imageUrl": "https://as2.ftcdn.net/v2/jpg/05/43/78/87/1000_F_543788726_BGzzl0LEcsYvpkVsSS3LfhZJQnQQinuU.jpg",
+        "imageUrl": "https://img.freepik.com/premium-vector/book-shop-store-building-cityscape_169241-983.jpg?w=826",
         "githubLink": "https://github.com/Vanhuyne/book-store-app",
         "demoLink": "http://localhost:4200",
         "timeSpent": "2 months"
@@ -34,7 +34,7 @@
           "TailwindCSS",
           "OpenAPI"
         ],
-        "imageUrl": "https://as2.ftcdn.net/v2/jpg/05/08/68/85/1000_F_508688587_t3QvFLVGwpaUvHjJFs2ziDoGlqwKizoU.jpg",
+        "imageUrl": "https://raw.githubusercontent.com/Vanhuyne/food-order-microservice/refs/heads/main/screenshot/restaurant.png",
         "githubLink": "https://github.com/Vanhuyne/food-order-microservice",
         "demoLink": "http://localhost:8080",
         "timeSpent": "2 months"
