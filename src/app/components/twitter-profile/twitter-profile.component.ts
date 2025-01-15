@@ -15,7 +15,7 @@ export class TwitterProfileComponent {
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
     this.loadProfile().subscribe(profile => {
       this.profile = profile;
-
+      
       this.profile.tweets.forEach(tweet => {
         if (tweet.gif) {
           tweet.gif = this.sanitizer.bypassSecurityTrustResourceUrl(tweet.gif as string);

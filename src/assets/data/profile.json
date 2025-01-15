@@ -1,18 +1,18 @@
 {
   "name": "Van Huy",
   "handle": "@ThanVanHuy25640",
-  "bio": "Software Developer | Powered by caffeine ☕ , exercise every day 🚴‍♀️",
+  "bio": "👨‍💻 Software Developer | ☕ Powered by caffeine | 🏃‍♂️ Exercise every day  | 🚀 Building cool stuff",
   "followers": 50,
   "following": 42,
   "website": "https://github.com/Vanhuyne",
   "joined": "July 2024",
   "location": "Viet Nam",
-  "profileImage": "assets/avatar-git.jpg",
+  "profileImage": "assets/avatar.png",
   "coverImage": "https://pbs.twimg.com/profile_banners/1866019820153507840/1733888976/1500x500",
   "tweets": [
     {
       "id": 1,
-      "text": "People look at me like I'm a weirdo! eccentric! 🤪 I just want to be myself!",
+      "text": "I am a Java Developer and a passion for building efficient, scalable software solutions. Through academic projects and personal learning, I have gained experience with Java frameworks like Spring and Hibernate, database management (MySQL), and RESTful APIs.\n\nEager to apply my skills in a professional setting, I bring a proactive mindset, a dedication to continuous learning, and a keen interest in problem-solving and innovation.\n\nLet’s connect to create impactful solutions together! ",
       "likes": 4,
       "retweets": 5,
       "comments": 2,

@@ -1,7 +1,7 @@
-<div class="px-8 pb-4 py-5 flex flex-col projects">
+<div class="px-8 pb-4 py-5 flex flex-col border-gray-600 border h-screen">
   <div class="flex items-center py-4">
-    <hr class="flex-grow max-w-10 border-gray-500 mr-4 w-3">
-    <span class="text-gray-500 text-sm">PROJECTS</span>
+    <hr class="flex-grow max-w-10 border-gray-600 mr-4 w-3">
+    <span class="text-gray-700 text-sm">PROJECTS</span>
   </div>
   <!-- Project List -->
   <div class="flex-grow">
@@ -15,18 +15,18 @@
           <!-- Project Image/Placeholder -->
           <div class="">
             <div class="w-24 h-24 rounded-md p-2
-                        flex items-center justify-center text-gray-400">
+                        flex items-center justify-center text-gray-700">
               <img class="w-full h-full object-cover border border-gray-200" src="{{ project.imageUrl }}" alt="">
             </div>
           </div>
           <!-- Project Details -->
           <div class="flex-grow flex flex-col">
             <!-- Project Title -->
-            <h3 class="text-lg font-semibold text-gray-400 mb-2">
+            <h3 class="text-lg font-semibold text-gray-700 mb-2">
               {{ project.title }}
             </h3>
             <!-- Project Description -->
-            <p class="text-gray-400 text-xs mb-2 flex-grow">
+            <p class="text-gray-500 text-xs mb-2 flex-grow">
               {{ project.description }}
             </p>
             <!-- View Project Label -->

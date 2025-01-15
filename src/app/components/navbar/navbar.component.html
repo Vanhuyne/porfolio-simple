@@ -1,4 +1,5 @@
-<nav class="fixed px-3  h-full flex flex-col items-start justify-between border-l border-r ">
+
+<nav class="px-3 h-full flex flex-col items-start justify-between border-gray-600 border">
   <!-- Top Section: Logo/Profile Image -->
   <div class="ps-2">
     <img src="assets/img-icons/x.jpg" alt="Logo" class="w-10 h-10">
@@ -11,27 +12,27 @@
       <i class="fas fa-home text-xl mr-4"></i> Home
     </a>
     <a [routerLink]="'/skills'" [ngClass]="{'active-link': isActive('/skills')}" class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-regular fa-lightbulb text-xl mr-5"></i> Skills
+      <i class="fa-regular fa-lightbulb text-xl mr-4"></i> Skills
     </a>
     <a [routerLink]="'/projects'" [ngClass]="{'active-link': isActive('/projects')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-regular fa-file text-xl mr-5"></i> Projects
+      <i class="fa-regular fa-file text-xl mr-4"></i> Projects
     </a>
     <a [routerLink]="'/explore'" [ngClass]="{'active-link': isActive('/explore')}" class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-solid fa-magnifying-glass text-xl mr-5"></i> Explore
+      <i class="fa-solid fa-magnifying-glass text-xl mr-4"></i> Explore
     </a>
     <a [routerLink]="'/notification'" [ngClass]="{'active-link': isActive('/notification')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-regular fa-bell text-xl mr-5"></i>Notification
+      <i class="fa-regular fa-bell text-xl mr-4"></i>Notification
     </a>
     <a [routerLink]="'/contact'" [ngClass]="{'active-link': isActive('/contact')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fas fa-envelope text-xl mr-5"></i> Message
+      <i class="fas fa-envelope text-xl mr-4"></i> Message
     </a>
 
     <a [routerLink]="'/resume'" [ngClass]="{'active-link': isActive('/communities')}"
       class="text-gray-800 px-4 py-2 transition duration-300 cursor-pointer flex items-center rounded-3xl   hover:bg-gray-300">
-      <i class="fa-solid fa-user-group text-xl mr-5"></i> Resume
+      <i class="fa-solid fa-user-group text-xl mr-4"></i> Resume
     </a>
   </div>
   <div class=" py-2">
